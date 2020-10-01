@@ -1,0 +1,162 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "classes": [
+        14
+      ],
+      "level": 12,
+      "name": "Elonoch Lorawynn"
+    },
+    {
+      "id": 2,
+      "classes": [
+        1,
+        9
+      ],
+      "level": 8,
+      "name": "Liam HelmsWort"
+    },
+    {
+      "id": 3,
+      "classes": [
+        2
+      ],
+      "level": 1,
+      "name": "Gorg"
+    },
+    {
+      "id": 4,
+      "classes": [
+        3
+      ],
+      "level": 6,
+      "name": "Bilbo Baggins"
+    },
+    {
+      "id": 5,
+      "classes": [
+        3
+      ],
+      "level": 5,
+      "name": "Frodo Baggins"
+    },
+    {
+      "id": 6,
+      "classes": [
+        7
+      ],
+      "level": 11,
+      "name": "Ninja Turtle"
+    },
+    {
+      "id": 7,
+      "classes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "level": 8,
+      "name": "Jack Ofalltrades"
+    },
+    {
+      "id": 8,
+      "classes": [
+        14
+      ],
+      "level": 20,
+      "name": "Merlin"
+    },
+    {
+      "id": 9,
+      "classes": [
+        3
+      ],
+      "level": 1,
+      "name": "Dandelion"
+    },
+    {
+      "id": 10,
+      "classes": [
+        11
+      ],
+      "level": 12,
+      "name": "Backstabs McGee"
+    }
+  ],
+  "classes": [
+    {
+      "id": 1,
+      "name": "Artificer",
+      "hitdice": "1d8"
+    },
+    {
+      "id": 2,
+      "name": "Barbarian",
+      "hitdice": "1d12"
+    },
+    {
+      "id": 3,
+      "name": "Bard",
+      "hitdice": "1d8"
+    },
+    {
+      "id": 4,
+      "name": "Blood Hunter",
+      "hitdice": "1d10"
+    },
+    {
+      "id": 5,
+      "name": "Cleric",
+      "hitdice": "1d8"
+    },
+    {
+      "id": 6,
+      "name": "Druid",
+      "hitdice": "1d8"
+    },
+    {
+      "id": 7,
+      "name": "Fighter",
+      "hitdice": "1d10"
+    },
+    {
+      "id": 8,
+      "name": "Monk",
+      "hitdice": "1d8"
+    },
+    {
+      "id": 9,
+      "name": "Paladin",
+      "hitdice": "1d10"
+    },
+    {
+      "id": 10,
+      "name": "Ranger",
+      "hitdice": "1d10"
+    },
+    {
+      "id": 11,
+      "name": "Rogue",
+      "hitdice": "1d8"
+    },
+    {
+      "id": 12,
+      "name": "Sorcerer",
+      "hitdice": "1d6"
+    },
+    {
+      "id": 13,
+      "name": "Warlock",
+      "hitdice": "1d8"
+    },
+    {
+      "id": 14,
+      "name": "Wizard",
+      "hitdice": "1d6"
+    }
+  ]
+}
