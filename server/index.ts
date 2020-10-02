@@ -1,3 +1,5 @@
+export {};
+
 const { ApolloServer } = require("apollo-server");
 const { ApolloGateway } = require("@apollo/gateway");
 
@@ -10,11 +12,15 @@ const gateway = new ApolloGateway({
   ]
 });
 
-const server = new ApolloServer({
+const server = new ApolloServer({ 
   gateway,
   subscriptions: false
 });
 
-server.listen({ port }).then(({ url }) => {
+export type ServerProps = {
+  url: string;
+}
+
+server.listen({ port }).then(({ url }: ServerProps) => {
   console.log(`Server ready at ${url}`);
 });

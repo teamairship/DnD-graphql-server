@@ -1,5 +1,9 @@
+
+export {};
+
 const { ApolloServer, gql } = require("apollo-server");
 const { buildFederatedSchema } = require("@apollo/federation");
+import { ServerProps } from "..";
 const fetch = require("node-fetch");
 
 const port = 4002;
@@ -20,16 +24,16 @@ const typeDefs = gql`
 
 const resolvers = {
   RpgClass: {
-    __resolveReference(ref) {
-      return fetch(`${apiUrl}/classes/${ref.id}`).then(res => res.json());
+    __resolveReference(ref: { id: any; }) {
+      return fetch(`${apiUrl}/classes/${ref.id}`).then((res: { json: () => any; }) => res.json());
     }
   },
   Query: {
-    class(_, { id }) {
-      return fetch(`${apiUrl}/classes/${id}`).then(res => res.json());
+    class(_: any, { id }: any) {
+      return fetch(`${apiUrl}/classes/${id}`).then((res: { json: () => any; }) => res.json());
     },
     classes() {
-      return fetch(`${apiUrl}/classes`).then(res => res.json());
+      return fetch(`${apiUrl}/classes`).then((res: { json: () => any; }) => res.json());
     }
   }
 };
@@ -38,6 +42,6 @@ const server = new ApolloServer({
   schema: buildFederatedSchema([{ typeDefs, resolvers }])
 });
 
-server.listen({ port }).then(({ url }) => {
+server.listen({ port }).then(({ url }: ServerProps) => {
   console.log(`Class service ready at ${url}`);
 });
