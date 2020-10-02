@@ -1,4 +1,3 @@
-
 export {};
 
 const { ApolloServer, gql } = require("apollo-server");
@@ -7,7 +6,7 @@ import { ServerProps } from "..";
 const fetch = require("node-fetch");
 
 const port = 4002;
-const apiUrl = "http://localhost:3000";
+const apiUrl = "http://localhost:3004";
 
 const typeDefs = gql`
   type RpgClass @key(fields: "id") {
@@ -24,7 +23,7 @@ const typeDefs = gql`
 
 const resolvers = {
   RpgClass: {
-    __resolveReference(ref: { id: any; }) {
+    __resolveReference(ref: { id: string; }) {
       return fetch(`${apiUrl}/classes/${ref.id}`).then((res: { json: () => any; }) => res.json());
     }
   },

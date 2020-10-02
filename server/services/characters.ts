@@ -7,7 +7,7 @@ import { ServerProps } from "..";
 const fetch = require("node-fetch");
 
 const port = 4001;
-const apiUrl = "http://localhost:3000";
+const apiUrl = "http://localhost:3004";
 
 const typeDefs = gql`
   type Character {
@@ -33,7 +33,6 @@ const resolvers = {
     async characters(rpgClass: { id: string; }) {
       const res = await fetch(`${apiUrl}/characters`);
       const characters = await res.json();
-      console.log({characters})
 
       return characters.filter(({ classes }: { classes: any[] }) =>
         classes.includes(parseInt(rpgClass.id))

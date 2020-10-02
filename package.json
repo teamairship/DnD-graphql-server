@@ -20,7 +20,7 @@
   },
   "scripts": {
     "server": "concurrently -k npm:server:*",
-    "server:rest": "json-server -q ./data/db.json",
+    "server:rest": "json-server -q ./data/db.json --port 3004",
     "server:characters": "nodemon ./server/services/characters.ts",
     "server:rpgClasses": "nodemon ./server/services/rpgClasses.ts",
     "server:graphql": "nodemon --watch 'server/**/*.ts' --exec 'ts-node' server/index.ts"
