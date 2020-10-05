@@ -9,4 +9,5 @@ A user wants to be able to create a new D&D character on the Characters home pag
 
 #### Acceptance Criteria
 
-- [ ] A user should be able to call the `createCharacter` by passing in a `name`, `level`, and `classes` array and create a new character.
+- [ ] A user can submit a form that calls the `createCharacter` mutation by passing in a `name`, `level`, and `classes` array.
+- [ ] BONUS: A server-admin should see a new log whenever the client calls the `createCharacter` mutation.
