@@ -1,13 +1,13 @@
-
 export {};
 
-const { ApolloServer, gql } = require("apollo-server");
-const { buildFederatedSchema } = require("@apollo/federation");
-import { ServerProps } from "..";
-const fetch = require("node-fetch");
+import { ApolloServer, gql } from "apollo-server";
+import { buildFederatedSchema } from "@apollo/federation";
 
-const port = 4001;
-const apiUrl = "http://localhost:3004";
+import { ServerProps } from "..";
+import fetch from "node-fetch";
+
+const port: number = 4001;
+const apiUrl: string = "http://localhost:3004";
 
 const typeDefs = gql`
   type Character {

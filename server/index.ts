@@ -1,7 +1,10 @@
 export {};
 
-const { ApolloServer } = require("apollo-server");
-const { ApolloGateway } = require("@apollo/gateway");
+import { ApolloServer } from "apollo-server-express";
+import { ApolloGateway } from "@apollo/gateway";
+
+import express from "express";
+const app = express();
 
 const port = 4000;
 
@@ -17,10 +20,12 @@ const server = new ApolloServer({
   subscriptions: false
 });
 
+server.applyMiddleware({ app });
+
 export type ServerProps = {
   url: string;
 }
 
-server.listen({ port }).then(({ url }: ServerProps) => {
-  console.log(`Server ready at ${url}`);
+app.listen({ port }, () => {
+  console.log(`Server ready at http://localhost:${port}/graphql`);
 });
